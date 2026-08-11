@@ -2,7 +2,7 @@ NAME		= ircserv
 CC			= c++
 RM			= rm -f
 CPPFLAGS	= -Wall -Werror -Wextra -std=c++98 -g
-SRC			= $(addprefix srcs/, Server.cpp main.cpp Client.cpp Channel.cpp Message.cpp Commands.cpp)
+SRC			= $(addprefix srcs/, Server.cpp main.cpp Client.cpp Channel.cpp Message.cpp Commands.cpp Utils.cpp)
 
 OBJ			= ${SRC:.cpp=.o}
 

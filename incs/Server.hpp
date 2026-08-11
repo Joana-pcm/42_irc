@@ -83,7 +83,8 @@ class Server {
         void        handleKick(Client& client, const Message& msg);
         void        handleQuit(Client& client, const Message& msg);
         void        handleMode(Client& client, const Message& msg);
-    };
+};
 
     // utility functions
     std::vector<std::string> split(const std::string& str, char delimiter);
+    bool ircEquals(const std::string& a, const std::string& b);
