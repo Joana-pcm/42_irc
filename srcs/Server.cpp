@@ -173,8 +173,7 @@ std::cout << "[DEBUG] data received from fd=" << fd << std::endl;
     client->appendToInBuffer(buffer, bytes);
     std::vector<std::string> lines = client->extractCompleteLines();
     for (size_t i = 0; i < lines.size(); ++i) {
-        std::cout << "[DEBUG] Parsing message from fd=" << fd << ": " << lines[i] << std::endl;
-        Message msg = Parser::parseLine(lines[i]);
+        Message msg = parseLine(lines[i]);
         if (!msg.command.empty())
             dispatchCommand(msg, client);
     }

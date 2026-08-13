@@ -8,6 +8,4 @@ struct Message {
     std::vector<std::string> params;
 };
 
-namespace Parser {
-    Message parseLine(const std::string& line);
-}
+Message parseLine(const std::string& line);

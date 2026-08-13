@@ -1,7 +1,6 @@
 #include "../incs/Message.hpp"
 
-namespace Parser {
-	Message parseLine(const std::string& line) {
+Message parseLine(const std::string& line) {
 		Message message;
 		size_t pos = 0;
 
@@ -47,5 +46,4 @@ namespace Parser {
 			}
 		}
 		return message;
-	}
 }

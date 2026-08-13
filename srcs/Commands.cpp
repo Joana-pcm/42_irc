@@ -208,7 +208,8 @@ void Server::handlePrivmsg(Client& client, const Message& msg) {
             sendNum(&client, ERR_NOSUCHNICK, target + " :No such nick/channel");
             return ;
         }
-        std::string privMsg = ":" + client.getNickname() + " PRIVMSG " + target + " :" + message + "\r\n";
+        std::string privMsg = ":" + client.getNickname() + " PRIVMSG "
+                            + targetClient->getNickname() + " :" + message + "\r\n";
         targetClient->queueOutgoing(privMsg);
     }
 }
@@ -243,7 +244,8 @@ void Server::handleTopic(Client& client, const Message& msg) {
         }
         std::string newTopic = msg.params[1];
         channel->setTopic(newTopic);
-        broadcastToChannel(":" + client.getNickname() + " TOPIC " + msg.params[0] + " :" + newTopic + "\r\n", channel, NULL);
+        broadcastToChannel(":" + client.getNickname() + " TOPIC " + msg.params[0] + " :"
+                            + newTopic + "\r\n", channel, NULL);
     }
 }
 

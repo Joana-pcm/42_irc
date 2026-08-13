@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <login1>.*
+*This project has been created as part of the 42 curriculum by jpatrici, aaugusto.*
 
 # ft_irc
 
@@ -177,7 +177,7 @@ Classic references used to understand IRC and socket programming concepts:
 
 ### AI usage
 
-AI (Claude, Anthropic) was used throughout this project as a design and debugging aid, not as a substitute for writing or understanding the code. Specifically, it was used for:
+AI (Claude, Anthropic) was used throughout this project as a debugging aid, not as a substitute for writing or understanding the code. Specifically, it was used for:
 
 - **IRC protocol clarification**: understanding the exact message grammar (prefix/command/params/trailing parameter), the semantics of commands like `JOIN`, `PART`, `MODE`, and `KICK`, and which numeric replies apply to which situations.
 - **Debugging support**: interpreting Valgrind output and server logs to pinpoint the root cause of specific bugs (e.g. a stale pointer left in a channel after a client's `Client` object was deleted).
