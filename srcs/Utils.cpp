@@ -84,10 +84,6 @@ void Server::removeClientFromChannel(Client* client, Channel* channel) {
             std::string opMsg = ":" + _serverName + " MODE " + channel->getName() + " +o " + newOperator->getNickname() + " is now the channel operator\r\n";
             broadcastToChannel(opMsg, channel, NULL);
         }
-        else
-        {
-            std::cout << "[DEBUG] Removed operator: " << channel->hasAnyOperator() << std::endl;
-        }
     }
 }
 

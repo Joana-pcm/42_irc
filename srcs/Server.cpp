@@ -156,7 +156,7 @@ void Server::_acceptNewClient() {
 void Server::_handleClientData(size_t index) {
     int fd = _pollFds[index].fd;
     Client* client = findClientByFd(fd);
-std::cout << "[DEBUG] data received from fd=" << fd << std::endl;
+
     if (!client)
         return ;
 

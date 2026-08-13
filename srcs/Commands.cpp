@@ -447,12 +447,8 @@ void Server::handleMode(Client& client, const Message& msg) {
 
 	std::string broadcastMsg = ":" + client.getNickname() + "!" + client.getUsername() 
 								+ "@" + client.getHostname() + " MODE " + channelName + " " + appliedModes;
-    std::cout << "[DEBUG] Broadcast message: " << broadcastMsg << std::endl;
-    std::cout << "[DEBUG] Mode arguments size: " << modeArgs.size() << std::endl;
-    std::cout << "[DEBUG] ArgIndex: " << argIndex << std::endl;
 	for (size_t i = 0; i < modeArgs.size(); ++i){
 		broadcastMsg += " " + modeArgs[i]; // Append mode arguments in order
-        std::cout << "[DEBUG] Mode argument: " << modeArgs[i] << std::endl;
     }
 	broadcastMsg += "\r\n";
 	broadcastToChannel(broadcastMsg, channel, NULL);
