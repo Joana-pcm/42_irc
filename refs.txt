@@ -1,4 +1,0 @@
-IRC PROTOCOL
-	https://www.rfc-editor.org/rfc/rfc2812.html
-	
-https://github.com/caroldaniel/42sp-cursus-ft_irc/
